@@ -62,6 +62,7 @@ ENTRYPOINT ["/usr/local/bin/dockerd-entrypoint.sh"]
 CMD ["serve"]
 
 COPY scripts scripts/
+COPY tuned_configs /opt/djl/tuned_configs/
 RUN chmod -R +x scripts
 RUN mkdir -p /opt/djl/conf \
     && mkdir -p /opt/djl/deps \
